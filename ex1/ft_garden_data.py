@@ -1,8 +1,8 @@
 class Plant:
-    def __init__(self, name, height, age):
+    def __init__(self, name : str, height : int, age : int) -> None :
         self.name = name
-        self.height = str(height) + "cm"
-        self.age = str(age) + " days old"
+        self.height = height
+        self.age = age
 
 
 if __name__ == "__main__":
@@ -13,4 +13,4 @@ if __name__ == "__main__":
     palnt_list = [rose, fleur, sunflower]
     for i in range(3):
         print(palnt_list[i].name, ": ", sep="", end="")
-        print(palnt_list[i].height, ", ", ", ", palnt_list[i].age, sep="")
+        print(palnt_list[i].height,"cm,", palnt_list[i].age,"days old")
