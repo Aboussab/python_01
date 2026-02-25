@@ -20,7 +20,9 @@ class SecurePlant:
     def get_age(self) -> int:
         return (self.__age)
 if __name__ == "__main__":
-    rose = SecurePlant("Rose",15,20)
-    print(rose.name)
-    rose.set_height(-0)
-    print(rose.get_height())
+    rose = SecurePlant("Rose",25,30)
+    print("Plant created:",rose.name)
+    print("Height updated: ",rose.get_height())
+    print(f"Age updated: {rose.get_age()} days")
+    print("\n")
+    rose.set_age(-22)
