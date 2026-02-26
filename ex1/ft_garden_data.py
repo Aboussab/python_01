@@ -1,4 +1,8 @@
+""" this a program that manages data for at least 3 different plants and displays their
+information in an organized way"""
+
 class Plant:
+    """this Plant class that serves as a blueprint for any plant using the __init__ constreucteur to built object"""
     def __init__(self, name: str, height: int, age: int) -> None:
         self.name = name
         self.height = height

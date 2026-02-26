@@ -1,10 +1,19 @@
 class SecurePlant:
+    """
+    A Plant class that uses encapsulation to protect its data.
+    Direct access to height and age is discouraged;
+    setters are used for validation.
+    """
     def __init__(self, name: str, height: int, age: int) -> None:
         self.name = name
         self.__height = height
         self.__age = age
 
+# ---------------GETTERS------------------
     def set_age(self, new_age: int) -> None:
+        """
+        Updates age only if the value is non-negative.
+        """
         if (new_age >= 0):
             self.__age = new_age
         else:
@@ -12,7 +21,11 @@ class SecurePlant:
             print("days [REJECTED]")
             print("Security: Negative age rejected")
 
+# ---------------SETTERS------------------
     def set_height(self, new_height: int) -> None:
+        """
+        Updates height only if the value is non-negative.
+        """
         if (new_height >= 0):
             self.__height = new_height
         else:
@@ -21,9 +34,11 @@ class SecurePlant:
             print("Security: Negative height rejected")
 
     def get_height(self) -> int:
+        """Returns the current height."""
         return (self.__height)
 
     def get_age(self) -> int:
+        """Returns the current age."""
         return (self.__age)
 
 
