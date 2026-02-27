@@ -1,8 +1,9 @@
 """ft_plant_creation.py - Streamlined creation of Plant objects.
 
-This programe demonstrates how to efficiently initialize multiple Plant instances
-using a list of data tuples and a list comprehension, rather than creating
-variables manually one by one."""
+This programe demonstrates how to efficiently initialize multiple
+Plant instances using a list of data tuples and a list comprehension,
+rather than creating variables manually one by one.
+"""
 
 
 class Plant:

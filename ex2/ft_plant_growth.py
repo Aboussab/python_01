@@ -5,6 +5,7 @@ This module defines a Plant class with methods to modify
 its state (age and growth)
 and tracks these changes over a simulated period of time."""
 
+
 class Plant:
     """ Represents a plant in the garden that can age and grow.
 

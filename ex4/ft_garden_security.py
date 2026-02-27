@@ -2,7 +2,7 @@ class SecurePlant:
     """
     A Plant class that uses encapsulation to protect its data.
     Direct access to height and age is discouraged;
-    setters are used for validation.
+    setters aresudo apt install flake8 used for validation.
     """
     def __init__(self, name: str, height: int, age: int) -> None:
         self.name = name

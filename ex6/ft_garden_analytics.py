@@ -5,6 +5,8 @@ A system to manage gardens, track plant growth, and calculate statistics
 using Object-Oriented Programming patterns (Inheritance, Nested Classes,
 Static/Class Methods).
 """
+
+
 class Plant:
     """
     The base class representing a  plant.
@@ -46,7 +48,8 @@ class FloweringPlant(Plant):
         if self.bloming is True:
             return (super().get_info() + f", {self.color} flowers (blooming)")
         else:
-            return (super().get_info() + f", {self.color} flowers (not blooming)")
+            return (super().get_info() +
+                    f",{self.color} flowers (not blooming)")
 
 
 class PrizeFlower(FloweringPlant):
@@ -75,10 +78,10 @@ class GardenManager:
 
     def __init__(self, owner: str) -> None:
         """Initializes the common attributes for any garden object
-        attri: 
-        name = the owner of the garden 
-        list_plants = list of all  kind of plants they have 
-        regular,flowering,prize = are a vars that increament every 
+        attri:
+        name = the owner of the garden
+        list_plants = list of all  kind of plants they have
+        regular,flowering,prize = are a vars that increament every
         time a specifique type has been added """
         self.name = owner
         self.list_plants = []
@@ -95,8 +98,8 @@ class GardenManager:
         @staticmethod
         def plants_grow(garden) -> None:
             """
-            A statice methode that calculate and displays 
-            statistique for a garden including plants added, 
+            A statice methode that calculate and displays
+            statistique for a garden including plants added,
             plant types, and totale adde for growth
             """
             sume = 0
@@ -105,7 +108,8 @@ class GardenManager:
                 sume += x.growth_tracker
                 j += 1
             print(f"Plants added: {j}, Total growth: {sume}cm")
-            print(f"Plant types: {garden.regular} regular, {garden.flowering} flowering,")
+            print(f"Plant types: {garden.regular} regular, ", end="")
+            print(f"{garden.flowering} flowering,")
             print(f"{garden.prize} prize flowers")
 
     @classmethod
@@ -143,7 +147,7 @@ class GardenManager:
             print(x.get_info())
 
     def checke_height(self) -> bool:
-        """a methode that check all the plants heights to verify that 
+        """a methode that check all the plants heights to verify that
         are accepted."""
         for x in self.list_plants:
             if x.height < 0:
@@ -153,7 +157,7 @@ class GardenManager:
 
     @classmethod
     def class_status(cls) -> None:
-        """this methode is a clss methode its object is just tell about the 
+        """this methode is a clss methode its object is just tell about the
         class status as exemple how many garden we are manageing """
         print(f"Total gardens managed: {cls.garden_created}")
 

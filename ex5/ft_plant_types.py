@@ -85,7 +85,8 @@ class Vegetable(Plant):
 
     def get_info(self) -> None:
         """Prints the specific details of the vegetable
-        including harvest season, and the nutritional value of the vegetable."""
+        including harvest season, and the nutritional value of the vegetable.
+        """
         print(f"{self.name}: {self.height}cm, {self.age} days, ", end="")
         print(f"{self.harvest_season} harvest")
         print(f"{self.name} is rich in {self.nutritional_value}")
